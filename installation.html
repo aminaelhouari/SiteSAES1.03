@@ -46,16 +46,41 @@
         <div class="card shadow-sm mb-5 border-0">
             <div class="card-header bg-primary text-white d-flex align-items-center">
                 <span class="badge bg-white text-primary me-3 fs-5">1</span>
+                <h2 class="h5 mb-0">Préparation du poste</h2>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="assets/img/virtualbox.png" class="img-fluid rounded shadow border"
+                            alt="Capture Configuration VirtualBox">
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="assets/img/Ubuntu.png" class="img-fluid rounded shadow border"
+                            alt="Capture Configuration VirtualBox">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Nous avons choisi comme logiciel de virtualisation Oracle VirtualBox et Ubuntu comme
+                            distribution</p>
+                    </div>
+                    <div class="alert alert-info small">
+                        <i class="bi bi-info-circle-fill me-2"></i>
+                        VirtualBox étant gratuit et open source, ce sont les principales raisons qui nous ont amener à
+                        faire ce choix, quant à Ubuntu tout simplement car c’est la distribution Linux la plus connue
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">2</span>
                 <h2 class="h5 mb-0">Configuration de la machine virtuel</h2>
             </div>
             <div class="card-body">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p>Nous avons décidé d'uilisé Oracle VirtualBox pour la suite de l'installation car c'est un
-                            logiciel OpenSource très facile d'utilisation</p>
                         <h5 class="text-primary mb-3"><i class="bi bi-sliders me-2"></i>Choix des ressources</h5>
                         <p>Nous avons configuré une nouvelle machine virtuelle nommée <strong>Ubuntu</strong> avec les
-                            caractéristiques suivantes pour garantir une bonne fluidité :</p>
+                            caractéristiques suivantes:</p>
                         <ul class="list-group list-group-flush mb-3">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Mémoire RAM
@@ -86,15 +111,52 @@
 
         <div class="card shadow-sm mb-5 border-0">
             <div class="card-header bg-primary text-white d-flex align-items-center">
-                <span class="badge bg-white text-primary me-3 fs-5">2</span>
-                <h2 class="h5 mb-0">Installation de l'OS (Ubuntu)</h2>
+                <span class="badge bg-white text-primary me-3 fs-5">3</span>
+                <h2 class="h5 mb-0">Lancement de l'installation</h2>
+            </div>
+
+            <div class="card-body">
+
+                <p class="mb-3">Après démarrage de la VM, il faut sélectionner “Try or Install Ubuntu”</p>
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <img src="assets/img/langue.png" class="img-fluid rounded shadow border w-100"
+                            alt="Choix de la langue">
+                    </div>
+
+                    <div class="col-md-4">
+                        <img src="assets/img/azerty.png" class="img-fluid rounded shadow border w-100"
+                            alt="Choix du clavier">
+                    </div>
+
+                    <div class="col-md-4">
+                        <img src="assets/img/installubuntu.png" class="img-fluid rounded shadow border w-100"
+                            alt="Type d'installation">
+                    </div>
+
+                </div>
+                <p class="text-center fst-italic mb-4">
+                    On a bien fait attention de sélectionner <strong>Français</strong> comme langue avec un clavier à
+                    disposition <strong>AZERTY</strong>
+                </p>
+                <div class="alert alert-info border-info d-flex align-items-center mb-4" role="alert">
+                    <i class="bi bi-info-circle-fill flex-shrink-0 me-3 fs-4"></i>
+                    <div>
+                        Étant donné que nous avions des consignes très précises, il était important de sélectionner
+                        <strong>l'installation interactive</strong>, car une installation automatisée aurait été
+                        contre-productive pour notre apprentissage.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">4</span>
+                <h2 class="h5 mb-0">Création du compte administrateur</h2>
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-12 mb-4">
-                        <p>Après lancement de la VM nous avons choisi la langue française avec le clavier AZERTY pour
-                            l'installation de l'OS (Ubuntu)</p>
-                    </div>
                     <div class="col-md-5 order-md-2 text-center">
                         <img src="assets/img/creacompte.png" class="img-fluid rounded shadow border"
                             alt="Création compte utilisateur">
@@ -115,105 +177,275 @@
                                 <td>admin-gr106-trio3</td>
                             </tr>
                         </table>
-
-                        <p> <em>On va ensuite redémarrer la Machine Virtuelle</em></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card shadow-sm mb-5 border-0">
-            <div class="card-header bg-primary text-white d-flex align-items-center">
-                <span class="badge bg-white text-primary me-3 fs-5">3</span>
-                <h2 class="h5 mb-0">Ajouts des additions invité</h2>
-            </div>
-            <div class="card-body">
-                <p>On va lancer un terminal depuis le CD des additions invités (<em>Pour ça il faut cliquer sur
-                        Périphériques -> Insérer l’image CD des Additions invité…)</em></p>
-
-                <h6 class="text-muted">Commandes exécutées :</h6>
-                <div class="bg-dark text-white p-3 rounded mb-3 font-monospace">
-                    <span class="text-success">admin@Ubuntu-VM:~$</span> sh autorun.sh.<br>
-                    <span class="text-secondary">#Ça va nous demander de nous authentifier donc on remet le mot de
-                        passe.</span><br>
-                    <span class="text-success">admin@Ubuntu-VM:~$</span> sudo apt install bzip2 tar open-vm-tools<br>
-                    <span class="text-secondary"># On écrit le mot de passe et on attend que ça finisse de charger puis
-                        on écrit o</span><br>
-                    <span class="text-success">admin@Ubuntu-VM:~$</span> sudo reboot
-                </div>
-                <div class="alert alert-info small">
-                    <i class="bi bi-info-circle-fill me-2"></i>
-                    Un redémarrage (sudo reboot) a été nécessaire pour appliquer les changements
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card shadow-sm mb-5 border-0">
-            <div class="card-header bg-primary text-white d-flex align-items-center">
-                <span class="badge bg-white text-primary me-3 fs-5">4</span>
-                <h2 class="h5 mb-0">Création des Utilisateurs et et d'un groupe</h2>
-            </div>
-            <div class="card-body">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p>Conformément au sujet, nous avons créé un groupe de travail et ajouté les utilisateurs
-                            membres du trinôme.</p>
-                        <ul>
-                            <li><strong>Groupe créé :</strong> <code>Trio3</code></li>
-                            <li><strong>Utilisateurs :</strong> <code>Trio3_1</code>, <code>Trio3_2</code>,
-                                <code>Trio3_3</code></li>
-                        </ul>
-                        <p>On a ensuite créer le groupe</p>
-                        <div class="bg-dark text-white p-3 rounded font-monospace small">
-                            sudo groupadd Trio3<br>
-                            sudo usermod –G Trio3 Trio3_1<br>
-                            sudo usermod -G Trio3 Trio3_2 <br>
-                            sudo usermod –G Trio3 Trio3_3
+                        <div class="alert alert-info small">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            Nous avons ensuite finalisé l’installation, laissant le système copier les fichiers sur le
+                            disque virtuel. Une fois la copie terminée, nous avons redémarré la VM
                         </div>
                     </div>
-                    <div class="col-md-6 text-center">
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">5</span>
+                <h2 class="h5 mb-0">Installation des Guest Additions</h2>
+            </div>
+
+            <div class="card-body">
+
+                <p class="mb-4">
+                    On va lancer un terminal depuis le CD des additions invités (Pour ça il faut cliquer sur
+                    <em>Périphériques -> Insérer l'image CD des Additions invité...</em>).<br>
+                    Un nouveau disque apparaît dans Ubuntu (icône de CD dans la barre de gauche), on clique dessus pour
+                    ouvrir son contenu.
+                </p>
+
+                <div class="row align-items-center">
+
+                    <div class="col-md-5 text-center">
+                        <img src="assets/img/guest-additions.png" class="img-fluid rounded shadow border mb-2"
+                            alt="Dossier Guest Additions">
+                        <p class="text-muted fst-italic small">
+                            Dans la fenêtre du CD, on a fait clic droit dans le dossier puis « Ouvrir dans un terminal
+                            ».
+                        </p>
+                    </div>
+
+                    <div class="col-md-7">
+                        <p class="fw-bold mb-2">Voici les commandes exécutées dans le terminal :</p>
+
+                        <div class="bg-black text-white p-3 rounded font-monospace shadow-sm"
+                            style="font-size: 0.85rem; line-height: 1.6;">
+
+                            <div>
+                                <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                                <span class="text-white">sh autorun.sh</span>
+                            </div>
+                            <div class="text-secondary fst-italic mb-2"># Ça va nous demander de nous authentifier donc
+                                on remet le mot de passe.</div>
+
+                            <div>
+                                <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                                <span class="text-white">sudo apt install bzip2 tar open-vm-tools</span>
+                            </div>
+                            <div class="text-secondary fst-italic mb-2"># On écrit le mot de passe et on attend que ça
+                                finisse de charger puis on écrit o</div>
+
+                            <div>
+                                <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                                <span class="text-white">sudo reboot</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info border-info d-flex align-items-center mt-4 mb-0" role="alert">
+                    <i class="bi bi-info-circle-fill flex-shrink-0 me-3 fs-4"></i>
+                    <div>
+                        Un redémarrage (<code>sudo reboot</code>) a été nécessaire pour appliquer les changements.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">6</span>
+                <h2 class="h5 mb-0">Création des comptes utilisateurs</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-5 order-md-2 text-center">
                         <img src="assets/img/utili.png" class="img-fluid rounded shadow border"
-                            alt="Gestion des utilisateurs">
+                            alt="Création compte utilisateur">
+                    </div>
+                    <div class="col-md-7 order-md-1">
+                        <p>On est allé dans Paramètres → Système → Utilisateurs. <br>On a ensuite dévérouiller la page
+                            en insérant le mot de passe du compte admin puis on a cliquer sur Ajouter un utilisateur
+                        </p>
+                        <h5 class="text-primary"><i class="bi bi-person-badge me-2"></i>Compte Utilisateurs</h5>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th class="bg-light">Nom </th>
+                                <td>Trio3_1</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Mot de passe</th>
+                                <td>***********</td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th class="bg-light">Nom </th>
+                                <td>Trio3_2</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Mot de passe</th>
+                                <td>***********</td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th class="bg-light">Nom </th>
+                                <td>Trio3_3</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Mot de passe</th>
+                                <td>***********</td>
+                            </tr>
+                        </table>
+                        <div class="alert alert-info small">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            On a bien fait attention à ne pas cocher la case Administrateur
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card shadow-sm border-0">
+        <div class="card shadow-sm mb-5 border-0">
             <div class="card-header bg-primary text-white d-flex align-items-center">
-                <span class="badge bg-white text-primary me-3 fs-5">5</span>
-                <h2 class="h5 mb-0">Personnalisation & Serveur Web</h2>
+                <span class="badge bg-white text-primary me-3 fs-5">7</span>
+                <h2 class="h5 mb-0">Création du groupe</h2>
             </div>
+
             <div class="card-body">
-                <div class="mb-4">
-                    <h5 class="text-primary">Personnalisation du Prompt (Invite de commande)</h5>
-                    <p>Nous avons modifié le fichier <code>.bashrc</code> pour afficher le nom de l'utilisateur dans le
-                        terminal.</p>
-                    <p>Pour ça on a écrit dans le terminal</p>
-                    <div class="bg-dark text-white p-3 rounded font-monospace small">
-                        nano ./.bashrc
+
+                <p class="text-center fst-italic mb-4">
+                    On a ouvert le terminal depuis le compte administrateur et écrit ces commandes :
+                </p>
+
+                <div class="bg-black text-white p-3 rounded font-monospace shadow-sm mb-4"
+                    style="font-size: 0.85rem; line-height: 1.6;">
+
+                    <div>
+                        <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                        <span class="text-white">sudo groupadd Trio3</span>
                     </div>
-                    <p><em><code>nano</code> est un éditeur de texte qui fonctionne dans le terminal directement. <code>./.bashrc</code> c'est le fichier qu'on va ouvrir ( . signifie que c'est un fichier caché)</em></p>
-                    <div class="bg-light border p-2 rounded font-monospace text-dark">
-                        echo "----------------" <br>
-                        echo "Bonjour $USER" <br>
-                        echo "----------------" <br>
+                    <div class="text-secondary fst-italic mb-3"># Ça va nous demander de nous authentifier pour valider
+                        la création du groupe</div>
+
+                    <div>
+                        <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                        <span class="text-white">sudo usermod -G Trio3 Trio3_1</span>
+                    </div>
+                    <div>
+                        <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                        <span class="text-white">sudo usermod -G Trio3 Trio3_2</span>
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                        <span class="text-white">sudo usermod -G Trio3 Trio3_3</span>
+                    </div>
+
+                    <div>
+                        <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                        <span class="text-white">sudo getent group Trio3</span>
+                    </div>
+
+                </div>
+
+                <div class="alert alert-info border-info d-flex align-items-center mb-0" role="alert">
+                    <i class="bi bi-info-circle-fill flex-shrink-0 me-3 fs-4"></i>
+                    <div class="small">
+                        <strong>sudo groupadd</strong> a permis de créer le groupe (nommé Trio3)<br>
+                        <strong>sudo usermod -G Trio3</strong> permet de rajouter chaque utilisateur au groupe Trio3<br>
+                        <strong>sudo getent group Trio3</strong> permet d'afficher les membres du groupe pour vérifier
+                        que tout a fonctionné
                     </div>
                 </div>
 
-                <hr>
+            </div>
+        </div>
 
-                <div class="mt-4">
-                    <h5 class="text-primary"><i class="bi bi-globe me-2"></i>Installation du Serveur Web Apache</h5>
-                    <p>Installation du paquet via la commande <code>sudo apt install apache2</code>. Le serveur est
-                        fonctionnel et accessible via l'adresse <code>localhost</code>.</p>
-                    <div class="text-center mt-3">
-                        <img src="assets/img/localhost.png" class="img-fluid rounded shadow border w-75"
-                            alt="Page par défaut Apache">
-                        <p class="text-muted small mt-2">Test de fonctionnement du serveur Apache</p>
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">8</span>
+                <h2 class="h5 mb-0">Personnalisation du terminal</h2>
+            </div>
+
+            <div class="card-body">
+
+                <p class="text-center fst-italic mb-2">
+                    On a ouvert le terminal depuis le compte administrateur et écrit "ls -AL"
+                </p>
+
+                <div class="text-center mb-3">
+                    <img src="assets/img/lsal.png" class="img-fluid rounded shadow border" alt="Capture ls -AL">
+                </div>
+
+                <p class="text-center small mb-4">
+                    On peut apercevoir des fichiers cachés tels que <code>.bash_history</code> ou encore
+                    <code>.bashrc</code> (c'est bash rc qui va nous intéresser car c'est un script de configuration pour
+                    le terminal)
+                </p>
+
+                <p class="text-center mb-4">On lance l'édition en écrivant <code>nano ./.bashrc</code></p>
+
+                <div class="text-center mb-4">
+                    <img src="assets/img/echobash.png" class="img-fluid rounded shadow border"
+                        alt="Capture nano bashrc">
+                </div>
+
+
+                <div class="bg-black text-white p-3 rounded font-monospace shadow-sm mb-4"
+                    style="font-size: 0.85rem; line-height: 1.6;">
+
+                    <div>
+                        <span class="text-success fw-bold">admin-gr106-trio3@Ubuntu-VM:</span>
+                        <span class="text-white">export PS1="SAE-S1.03 [\u] \w $ </span>
                     </div>
                 </div>
+                <div class="text-center mb-4">
+                    <img src="assets/img/resultatbash.png" class="img-fluid rounded shadow " style="max-width: 80%;"
+                        alt="Résultat final">
+                </div>
+                <div class="alert alert-info border-info d-flex align-items-center mb-0" role="alert">
+                    <div class="small fst-italic">
+                        On a juste ensuite copié le fichier bashrc et on l'a collé dans chaque compte utilisateur.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">9</span>
+                <h2 class="h5 mb-0">Installation du serveur web</h2>
+            </div>
+
+            <div class="card-body">
+
+                <p class="text-center fst-italic mb-4">
+                    On a ouvert le terminal depuis le compte administrateur et écrit ces commandes :
+                </p>
+
+                <div class="bg-black text-white p-3 rounded font-monospace shadow-sm mb-4"
+                    style="font-size: 0.85rem; line-height: 1.6;">
+
+                    <div>
+                        <span class="text-success fw-bold">SAE-S1.03 [admin-gr106-trio3] ~ $</span>
+                        <span class="text-white"> sudo apt update</span>
+                    </div>
+                    <div class="text-secondary fst-italic mb-3">#Ça va nous demander de nous authentifier</div>
+                    <div>
+                        <span class="text-success fw-bold">SAE-S1.03 [admin-gr106-trio3] ~ $</span>
+                        <span class="text-white"> sudo apt install apache2</span>
+                    </div>
+                    <div class="text-secondary fst-italic mb-3">#Ça va installer les paquets puis écrire o pour lancer
+                        l’installation entière</div>
+                </div>
+                <div class="text-center mb-4">
+                    <img src="assets/img/localhost.png" class="img-fluid rounded shadow " style="max-width: 80%;"
+                        alt="Résultat final">
+                </div>
+                <p class="text-center mb-4">En écrivant <code>localhost</code> sur Firefox cette page c’est ouvert, ce qui signifie bien que le déploiement est un succès</p>
+
             </div>
         </div>
 
