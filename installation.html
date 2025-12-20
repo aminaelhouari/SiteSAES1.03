@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation - SAE S1.03</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e3f2fd;" data-bs-theme="light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">SAE S1.03</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="concepts.html">Théorie & Concepts</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="installation.html">Installation &
+                            Choix Techniques</a></li>
+                    <li class="nav-item"><a class="nav-link" href="annexes.html">Gestion de projet</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container mt-5 pt-5 mb-5 text-center">
+        <h1 class="display-4 fw-bold mb-3">Protocole d'Installation</h1>
+        <p class="lead text-muted">Documentation technique de la mise en place de l'environnement de développement sous
+            Linux Ubuntu.</p>
+        <div class="d-flex justify-content-center gap-2">
+            <span class="badge bg-primary">VirtualBox </span>
+            <span class="badge bg-primary">Ubuntu </span>
+            <span class="badge bg-primary">Apache2</span>
+        </div>
+    </header>
+
+    <div class="container pb-5">
+
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">1</span>
+                <h2 class="h5 mb-0">Configuration de la machine virtuel</h2>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>Nous avons décidé d'uilisé Oracle VirtualBox pour la suite de l'installation car c'est un
+                            logiciel OpenSource très facile d'utilisation</p>
+                        <h5 class="text-primary mb-3"><i class="bi bi-sliders me-2"></i>Choix des ressources</h5>
+                        <p>Nous avons configuré une nouvelle machine virtuelle nommée <strong>Ubuntu</strong> avec les
+                            caractéristiques suivantes pour garantir une bonne fluidité :</p>
+                        <ul class="list-group list-group-flush mb-3">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Mémoire RAM
+                                <span class="badge bg-secondary rounded-pill">4096 Mo (4 Go)</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Processeurs
+                                <span class="badge bg-secondary rounded-pill">4 Cœurs</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Disque Dur
+                                <span class="badge bg-secondary rounded-pill">80 Go</span>
+                            </li>
+                        </ul>
+                        <div class="alert alert-info small">
+                            <i class="bi bi-info-circle-fill me-2"></i>
+                            4 Go de RAM et 4 cœurs permettent de faire tourner l'interface graphique sans faire ralentir
+                            l'ordinateur hôte
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="assets/img/configvm.png" class="img-fluid rounded shadow border"
+                            alt="Capture Configuration VirtualBox">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">2</span>
+                <h2 class="h5 mb-0">Installation de l'OS (Ubuntu)</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <p>Après lancement de la VM nous avons choisi la langue française avec le clavier AZERTY pour
+                            l'installation de l'OS (Ubuntu)</p>
+                    </div>
+                    <div class="col-md-5 order-md-2 text-center">
+                        <img src="assets/img/creacompte.png" class="img-fluid rounded shadow border"
+                            alt="Création compte utilisateur">
+                    </div>
+                    <div class="col-md-7 order-md-1">
+                        <h5 class="text-primary"><i class="bi bi-person-badge me-2"></i>Compte Administrateur</h5>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th class="bg-light">Nom complet</th>
+                                <td>admin_Gr106_Trio3</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Nom de l'ordinateur</th>
+                                <td>Ubuntu-VM</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Nom d'utilisateur <em>(crée automatiquement)</em></th>
+                                <td>admin-gr106-trio3</td>
+                            </tr>
+                        </table>
+
+                        <p> <em>On va ensuite redémarrer la Machine Virtuelle</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">3</span>
+                <h2 class="h5 mb-0">Ajouts des additions invité</h2>
+            </div>
+            <div class="card-body">
+                <p>On va lancer un terminal depuis le CD des additions invités (<em>Pour ça il faut cliquer sur
+                        Périphériques -> Insérer l’image CD des Additions invité…)</em></p>
+
+                <h6 class="text-muted">Commandes exécutées :</h6>
+                <div class="bg-dark text-white p-3 rounded mb-3 font-monospace">
+                    <span class="text-success">admin@Ubuntu-VM:~$</span> sh autorun.sh.<br>
+                    <span class="text-secondary">#Ça va nous demander de nous authentifier donc on remet le mot de
+                        passe.</span><br>
+                    <span class="text-success">admin@Ubuntu-VM:~$</span> sudo apt install bzip2 tar open-vm-tools<br>
+                    <span class="text-secondary"># On écrit le mot de passe et on attend que ça finisse de charger puis
+                        on écrit o</span><br>
+                    <span class="text-success">admin@Ubuntu-VM:~$</span> sudo reboot
+                </div>
+                <div class="alert alert-info small">
+                    <i class="bi bi-info-circle-fill me-2"></i>
+                    Un redémarrage (sudo reboot) a été nécessaire pour appliquer les changements
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card shadow-sm mb-5 border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">4</span>
+                <h2 class="h5 mb-0">Création des Utilisateurs et et d'un groupe</h2>
+            </div>
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>Conformément au sujet, nous avons créé un groupe de travail et ajouté les utilisateurs
+                            membres du trinôme.</p>
+                        <ul>
+                            <li><strong>Groupe créé :</strong> <code>Trio3</code></li>
+                            <li><strong>Utilisateurs :</strong> <code>Trio3_1</code>, <code>Trio3_2</code>,
+                                <code>Trio3_3</code></li>
+                        </ul>
+                        <p>On a ensuite créer le groupe</p>
+                        <div class="bg-dark text-white p-3 rounded font-monospace small">
+                            sudo groupadd Trio3<br>
+                            sudo usermod –G Trio3 Trio3_1<br>
+                            sudo usermod -G Trio3 Trio3_2 <br>
+                            sudo usermod –G Trio3 Trio3_3
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="assets/img/utili.png" class="img-fluid rounded shadow border"
+                            alt="Gestion des utilisateurs">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-primary text-white d-flex align-items-center">
+                <span class="badge bg-white text-primary me-3 fs-5">5</span>
+                <h2 class="h5 mb-0">Personnalisation & Serveur Web</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-4">
+                    <h5 class="text-primary">Personnalisation du Prompt (Invite de commande)</h5>
+                    <p>Nous avons modifié le fichier <code>.bashrc</code> pour afficher le nom de l'utilisateur dans le
+                        terminal.</p>
+                    <p>Pour ça on a écrit dans le terminal</p>
+                    <div class="bg-dark text-white p-3 rounded font-monospace small">
+                        nano ./.bashrc
+                    </div>
+                    <p><em><code>nano</code> est un éditeur de texte qui fonctionne dans le terminal directement. <code>./.bashrc</code> c'est le fichier qu'on va ouvrir ( . signifie que c'est un fichier caché)</em></p>
+                    <div class="bg-light border p-2 rounded font-monospace text-dark">
+                        echo "----------------" <br>
+                        echo "Bonjour $USER" <br>
+                        echo "----------------" <br>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="mt-4">
+                    <h5 class="text-primary"><i class="bi bi-globe me-2"></i>Installation du Serveur Web Apache</h5>
+                    <p>Installation du paquet via la commande <code>sudo apt install apache2</code>. Le serveur est
+                        fonctionnel et accessible via l'adresse <code>localhost</code>.</p>
+                    <div class="text-center mt-3">
+                        <img src="assets/img/localhost.png" class="img-fluid rounded shadow border w-75"
+                            alt="Page par défaut Apache">
+                        <p class="text-muted small mt-2">Test de fonctionnement du serveur Apache</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="py-4 mt-5" style="background-color: #e3f2fd;" data-bs-theme="light">
+        <div class="container">
+            <hr class="my-3 bg-secondary">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="small text-muted mb-0">&copy; 2025 - SAÉ S1.03 - Groupe 106</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
